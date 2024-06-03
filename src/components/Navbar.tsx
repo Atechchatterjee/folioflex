@@ -13,26 +13,27 @@ export default function Navbar({
   return (
     <div
       className={cn(
-        "w-[60%] m-auto shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] border border-1 border-slate-200 px-6 h-16 mt-4 flex gap-5 rounded-lg items-center",
+        "w-full bg-black m-auto shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] border border-1 border-slate-200 px-6 h-16 mt-4 flex gap-5 rounded-full items-center",
         className
       )}
       {...props}
     >
       <Link href="/">
-        <Image src="logo.svg" width={120} height={10} alt="logo" />
+        <Image src="logo-dark.svg" width={120} height={10} alt="logo" />
       </Link>
       <div className="flex gap-7 ml-auto text-sm font-medium items-center">
-        <Link href="#" className="text-slate-600 hover:text-slate-800">
+        <Link href="#" className="text-slate-300 hover:text-white">
           Features
         </Link>
-        <Link href="#" className="text-slate-600 hover:text-slate-800">
+        <Link href="#" className="text-slate-300 hover:text-white">
           About
         </Link>
-        <Link href="#" className="text-slate-600 hover:text-slate-800">
+        <Link href="#" className="text-slate-300 hover:text-white">
           Contact
         </Link>
         <Button
-          variant="gradient-black"
+          variant="default-white"
+          className="bg-white text-black rounded-full"
           onClick={() => window.location.assign("/login")}
         >
           Login
